@@ -1,0 +1,3 @@
+add_executable(factorial_test factorial_test.cc)
+target_link_libraries(factorial_test factorial)
+add_test(NAME factorial_test COMMAND factorial_test)
