@@ -1,0 +1,4 @@
+cmake_minimum_required(VERSION 3.8)
+add_library(max_subsequence_sum max_subsequence_sum.hh max_subsequence_sum.cc)
+target_link_libraries(max_subsequence_sum)
+target_include_directories(max_subsequence_sum PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

@@ -4,6 +4,6 @@
 #include "hello.hh"
 #include <iostream>
 
-void HelloWorld::printHello() {
+void HelloWorld::PrintHello() {
     std::cout<<"hello world";
 }

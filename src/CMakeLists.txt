@@ -1,4 +1,5 @@
 add_subdirectory(factorial)
 add_subdirectory(hello_world)
+add_subdirectory(max_subsequence_sum)
 add_executable(main main.cc)
-target_link_libraries(main factorial hello)
+target_link_libraries(main factorial hello max_subsequence_sum)

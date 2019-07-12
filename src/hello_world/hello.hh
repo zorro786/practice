@@ -9,5 +9,5 @@
 
 class HelloWorld {
 public:
-    void printHello();
+    void PrintHello();
 };

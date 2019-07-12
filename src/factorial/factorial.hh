@@ -13,19 +13,22 @@
 class Factorial {
 private:
     int max_allowed_int;
-    bool checkValidInput(int n);
+
+    bool CheckValidInput(int n);
+
 public:
+    // The c'tor.
     Factorial();
     /**
      * Calculates factorial using recursion in O(n) time with O(n) space
      * @param n Non negative number whose factorial needs to be calculated
-     * @return factorial value, -1 if invalid input or overflow
+     * @return factorial value, -1 if invalid input or overflow.
      */
     int FactorialUsingRecursion(const int n);
     /**
      * Calculates factorial using iteration in O(n) time with O(1) space
      * @param n Non negative number whose factorial needs to be calculated
-     * @return factorial, -1 if invalid input or overflow
+     * @return factorial, -1 if invalid input or overflow.
      */
     int FactorialUsingIteration(const int n);
 };

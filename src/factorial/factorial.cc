@@ -15,19 +15,19 @@
         }
     }
 
-    bool Factorial :: checkValidInput(int n) {
+    bool Factorial :: CheckValidInput(int n) {
         return n < 0 || n > max_allowed_int ? false : true;
     }
 
     int Factorial :: FactorialUsingRecursion(const int n) {
-        if (!checkValidInput(n)) {
+        if (!CheckValidInput(n)) {
             return -1;
         }
         return n < 2 ? 1 : n * FactorialUsingRecursion(n - 1);
     }
 
     int Factorial :: FactorialUsingIteration(const int n) {
-        if (!checkValidInput(n)) {
+        if (!CheckValidInput(n)) {
             return -1;
         }
 
