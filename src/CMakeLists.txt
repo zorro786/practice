@@ -1,5 +1,6 @@
 add_subdirectory(factorial)
 add_subdirectory(hello_world)
 add_subdirectory(max_subsequence_sum)
+add_subdirectory(array_rotation)
 add_executable(main main.cc)
-target_link_libraries(main factorial hello max_subsequence_sum)
+target_link_libraries(main factorial hello max_subsequence_sum array_rotation)
