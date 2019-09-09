@@ -44,31 +44,6 @@ int MaxSubsequenceSum::FindMaxSubsequenceSumUsingBruteForce(const std::vector<in
     return max_sum;
 }
 
-int MaxSubsequenceSum::FindMaxSubsequenceSumUsingDivideAndConquer(const std::vector<int> input) {
-    assert(input.size() > 0);
-
-    return FindMaxSumSequenceSumUsingDivideAndConquerHelper(input, 0, input.size() - 1);
-}
-
-int MaxSubsequenceSum::FindMaxSumSequenceSumUsingDivideAndConquerHelper(const std::vector<int> input, int start, int end) {
-    if (start == end) {
-        return input[start];
-    }
-
-    int mid = start + (end - start)/2;
-    int max_sum_left = FindMaxSumSequenceSumUsingDivideAndConquerHelper(input, start, mid);
-    int max_sum_right = FindMaxSumSequenceSumUsingDivideAndConquerHelper(input, mid + 1, end);
-    int max_sum_left_right = std::max(max_sum_left, max_sum_right);
-    int current_max = 0;
-
-    for (int i = start; i <= end; i++) {
-        CheckOutOfBounds(current_max, input[i]);
-        current_max += input[i];
-    }
-
-    return std::max(current_max, max_sum_left_right);
-}
-
 // Per Google C++ style exceptions shouldn't be used, it is okay for this small code
 void MaxSubsequenceSum::CheckOutOfBounds(const int a, const int b) {
     if (a > 0) {
